@@ -11,6 +11,16 @@ set incsearch
 set clipboard=unnamed
 set cursorline
 set laststatus=2
+set tabstop=4
+set shiftwidth=4
+set shiftround
+set ignorecase
+set smartcase
+set smarttab
+set softtabstop=4
+set autoindent
+set smartindent
+set expandtab
 execute pathogen#infect()
 filetype plugin indent on
 map <C-n> :NERDTreeToggle<CR>
@@ -21,6 +31,8 @@ map <C-Left> <Esc>:tabprev<CR>
 map <C-Right> <Esc>:tabnext<CR>
 map <C-Up> <Esc>:tabnew<CR>
 map <F12> :set invnumber<CR>
+map <F9> :set list!<CR>
+set pastetoggle=<F12>
 
 if v:version < 700 || exists('loaded_switchcolor') || &cp
 	finish
