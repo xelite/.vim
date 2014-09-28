@@ -87,3 +87,6 @@ imap <S-F8> <Esc>:call SwitchColor(-1)<CR>
 "podświetlenie białych spacji
 highlight RedundantWhitespace ctermbg=239 guibg=239
 match RedundantWhitespace /\s\+$\| \+\ze\t/
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
