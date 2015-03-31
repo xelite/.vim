@@ -90,3 +90,4 @@ match RedundantWhitespace /\s\+$\| \+\ze\t/
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
