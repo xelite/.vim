@@ -30,9 +30,9 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 map <C-Left> <Esc>:tabprev<CR>
 map <C-Right> <Esc>:tabnext<CR>
 map <C-Up> <Esc>:tabnew<CR>
-map <F12> :set invnumber<CR>
+map <F10> :set invnumber<CR>
 map <F9> :set list!<CR>
-set pastetoggle=<F12>
+set paste
 
 if v:version < 700 || exists('loaded_switchcolor') || &cp
 	finish
