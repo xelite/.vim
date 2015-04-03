@@ -1,16 +1,17 @@
+"Commands and maps
 command W w !sudo tee % >/dev/null
-set nu
-syntax enable
-set background=dark
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
 map <F5> :setlocal spell! spelllang=pl<CR>
+
+"Set
+syntax enable
+colorscheme koehler
+set background=dark
+let g:rehash256 = 1
+set nonu
 set hlsearch
 set incsearch
-set clipboard=unnamed
-set cursorline
-set laststatus=2
+set nocursorline
+"set laststatus=
 set tabstop=4
 set shiftwidth=4
 set shiftround
@@ -21,8 +22,12 @@ set softtabstop=4
 set autoindent
 set smartindent
 set expandtab
+set ic
+set paste
+
 execute pathogen#infect()
 filetype plugin indent on
+
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
@@ -32,13 +37,16 @@ map <C-Right> <Esc>:tabnext<CR>
 map <C-Up> <Esc>:tabnew<CR>
 map <F10> :set invnumber<CR>
 map <F9> :set list!<CR>
-set paste
 
 if v:version < 700 || exists('loaded_switchcolor') || &cp
 	finish
 endif
 
 let loaded_switchcolor = 1
+
+map <C-Left> <Esc>:tabprev<CR>
+map <C-Right> <Esc>:tabnext<CR>
+map <C-Up> <Esc>:tabnew<CR>
 
 let paths = split(globpath(&runtimepath, 'colors/*.vim'), "\n")
 let s:swcolors = map(paths, 'fnamemodify(v:val, ":t:r")')
