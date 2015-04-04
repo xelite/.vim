@@ -129,3 +129,7 @@ endfunction
 function GitAuthorName()
     return expand('$GIT_AUTHOR_NAME')
 endfunction
+
+"airline
+let g:airline_powerline_fonts=1
+let g:Powerline_symbols = "fancy"
