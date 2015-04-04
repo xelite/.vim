@@ -24,11 +24,12 @@ F10        toggle nu
 #### visual mode
 ```
 \sf        SQLUFormatter
+gc         comment selected text
 ```
 
 ### PLUGINS
 
-* https://github.com/aperezdc/vim-template                                               
+* https://github.com/aperezdc/vim-template
 * https://github.com/bling/vim-airline
 * https://github.com/kien/ctrlp.vim
 * https://github.com/scrooloose/nerdtree
@@ -39,7 +40,7 @@ F10        toggle nu
 
 ### SKINS
 
-* dotshare.vim                                                                                                                                                         
+* dotshare.vim
 * github.vim
 * luna-term.vim
 * luna.vim
