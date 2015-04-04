@@ -22,3 +22,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+[submodule "bundle/syntastic-extras"]
+	path = bundle/syntastic-extras
+	url = https://github.com/myint/syntastic-extras.git

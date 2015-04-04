@@ -100,6 +100,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "syntastic
+let g:syntastic_error_symbol = "✗"
+let g:syntastic_warning_symbol = "⚠"
+let g:syntastic_enable_highlighting = 0
+let g:syntastic_auto_jump = 3
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -107,6 +111,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_perl_checkers = ['perl']
 let g:syntastic_python_checkers = ['python']
+let g:syntastic_yaml_checkers = ['pyyaml']
 
 "SQLUtilities
 vmap <silent>sf        <Plug>SQLU_Formatter<CR>
