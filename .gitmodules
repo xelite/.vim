@@ -16,3 +16,6 @@
 [submodule "bundle/vim-template"]
 	path = bundle/vim-template
 	url = https://github.com/aperezdc/vim-template.git
+[submodule "bundle/vim-airline"]
+	path = bundle/vim-airline
+	url = https://github.com/bling/vim-airline
