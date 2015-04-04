@@ -35,10 +35,10 @@ map <F10> :set invnumber<CR>
 map <F9> :set list!<CR>
 set paste
 " zaznacz wszystko
-map <C-a> <esc>ggVG<CR>
+map <F1> <esc>ggVG<CR>
 
 if v:version < 700 || exists('loaded_switchcolor') || &cp
-	finish
+    finish
 endif
 
 let loaded_switchcolor = 1
@@ -51,36 +51,36 @@ let s:swindex = 0
 
 function! SwitchColor(swinc)
 
-	" if have switched background: dark/light
-	if (s:swback == 1)
-		let s:swback = 0
-		let s:swindex += a:swinc
-		let i = s:swindex % len(s:swcolors)
+    " if have switched background: dark/light
+    if (s:swback == 1)
+        let s:swback = 0
+        let s:swindex += a:swinc
+        let i = s:swindex % len(s:swcolors)
 
-		" in skip list
-		if (index(s:swskip, s:swcolors[i]) == -1)
-			execute "colorscheme " . s:swcolors[i]
-		else
-			return SwitchColor(a:swinc)
-		endif
+        " in skip list
+        if (index(s:swskip, s:swcolors[i]) == -1)
+            execute "colorscheme " . s:swcolors[i]
+        else
+            return SwitchColor(a:swinc)
+        endif
 
-	else
-		let s:swback = 1
-		if (&background == "light")
-			execute "set background=dark"
-		else
-			execute "set background=light"
-		endif
+    else
+        let s:swback = 1
+        if (&background == "light")
+            execute "set background=dark"
+        else
+            execute "set background=light"
+        endif
 
-		" roll back if background is not supported
-		if (!exists('g:colors_name'))
-			return SwitchColor(a:swinc)
-		endif
-	endif
+        " roll back if background is not supported
+        if (!exists('g:colors_name'))
+            return SwitchColor(a:swinc)
+        endif
+    endif
 
-	" show current name on screen. :h :echo-redraw
-	redraw
-	execute "colorscheme"
+    " show current name on screen. :h :echo-redraw
+    redraw
+    execute "colorscheme"
 endfunction
  map <F8>        :call SwitchColor(1)<CR>
 imap <F8>   <Esc>:call SwitchColor(1)<CR>
