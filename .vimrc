@@ -106,9 +106,26 @@ let g:syntastic_perl_checkers = ['perl']
 let g:syntastic_python_checkers = ['python']
 
 "SQLUtilities
-"let g:sqlutil_load_default_maps = 0
-vmap <silent>sf        <Plug>SQLU_Formatter<CR>
-nmap <silent>scl       <Plug>SQLU_CreateColumnList<CR>
-nmap <silent>scd       <Plug>SQLU_GetColumnDef<CR>
-nmap <silent>scdt      <Plug>SQLU_GetColumnDataType<CR>
-nmap <silent>scp       <Plug>SQLU_CreateProcedure<CR>
+" let g:sqlutil_load_default_maps = 1
+" vmap <silent>sf        <Plug>SQLU_Formatter<CR>
+" nmap <silent>scl       <Plug>SQLU_CreateColumnList<CR>
+" nmap <silent>scd       <Plug>SQLU_GetColumnDef<CR>
+" nmap <silent>scdt      <Plug>SQLU_GetColumnDataType<CR>
+" nmap <silent>scp       <Plug>SQLU_CreateProcedure<CR>
+
+"vim-commentary
+autocmd FileType apache set commentstring=#\ %s
+
+"let g:templates_debug = 1
+let GIT_AUTHOR_NAME = $GIT_AUTHOR_NAME
+let GIT_AUTHOR_EMAIL = $GIT_AUTHOR_EMAIL
+let g:templates_user_variables = [['FULLPATH', 'GetFullPath'],['GIT_AUTHOR_EMAIL', 'GitAuthorEmail'], ['GIT_AUTHOR_NAME', 'GitAuthorName']]
+function GetFullPath()
+    return expand('%:p')
+endfunction
+function GitAuthorEmail()
+    return expand('$GIT_AUTHOR_EMAIL')
+endfunction
+function GitAuthorName()
+    return expand('$GIT_AUTHOR_NAME')
+endfunction
