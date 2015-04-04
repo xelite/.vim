@@ -2,7 +2,8 @@ command W w !sudo tee % >/dev/null
 set nu
 syntax enable
 set background=dark
-colorscheme molokai
+colorscheme Tomorrow-Night-Eighties
+"colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 map <F5> :setlocal spell! spelllang=pl<CR>
@@ -132,5 +133,5 @@ function GitAuthorName()
 endfunction
 
 "airline
-let g:airline_powerline_fonts=1
 let g:Powerline_symbols = "fancy"
+let g:airline_powerline_fonts = 1
