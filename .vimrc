@@ -34,6 +34,8 @@ map <C-Up> <Esc>:tabnew<CR>
 map <F10> :set invnumber<CR>
 map <F9> :set list!<CR>
 set paste
+" zaznacz wszystko
+map <C-a> <esc>ggVG<CR>
 
 if v:version < 700 || exists('loaded_switchcolor') || &cp
 	finish
@@ -107,12 +109,11 @@ let g:syntastic_perl_checkers = ['perl']
 let g:syntastic_python_checkers = ['python']
 
 "SQLUtilities
-" let g:sqlutil_load_default_maps = 1
-" vmap <silent>sf        <Plug>SQLU_Formatter<CR>
-" nmap <silent>scl       <Plug>SQLU_CreateColumnList<CR>
-" nmap <silent>scd       <Plug>SQLU_GetColumnDef<CR>
-" nmap <silent>scdt      <Plug>SQLU_GetColumnDataType<CR>
-" nmap <silent>scp       <Plug>SQLU_CreateProcedure<CR>
+vmap <silent>sf        <Plug>SQLU_Formatter<CR>
+nmap <silent>scl       <Plug>SQLU_CreateColumnList<CR>
+nmap <silent>scd       <Plug>SQLU_GetColumnDef<CR>
+nmap <silent>scdt      <Plug>SQLU_GetColumnDataType<CR>
+nmap <silent>scp       <Plug>SQLU_CreateProcedure<CR>
 
 "vim-commentary
 autocmd FileType apache set commentstring=#\ %s
