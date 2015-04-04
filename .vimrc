@@ -117,6 +117,7 @@ let g:syntastic_python_checkers = ['python']
 autocmd FileType apache set commentstring=#\ %s
 
 "let g:templates_debug = 1
+let g:templates_directory = '$HOME/.vim/templates'
 let GIT_AUTHOR_NAME = $GIT_AUTHOR_NAME
 let GIT_AUTHOR_EMAIL = $GIT_AUTHOR_EMAIL
 let g:templates_user_variables = [['FULLPATH', 'GetFullPath'],['GIT_AUTHOR_EMAIL', 'GitAuthorEmail'], ['GIT_AUTHOR_NAME', 'GitAuthorName']]
