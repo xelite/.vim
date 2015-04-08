@@ -24,7 +24,6 @@ set smartindent
 set expandtab
 set ic
 set paste
-set laststatus=2
 
 execute pathogen#infect()
 filetype plugin indent on
@@ -151,6 +150,8 @@ endfunction
 "airline
 let g:Powerline_symbols = "fancy"
 let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+map <F2>    <Esc>:set laststatus=2<CR>
 
 if executable('ag')
   let g:ackprg = 'ag'
