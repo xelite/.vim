@@ -24,6 +24,7 @@ set smartindent
 set expandtab
 set ic
 set paste
+set laststatus=2
 
 execute pathogen#infect()
 filetype plugin indent on
