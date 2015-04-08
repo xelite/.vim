@@ -148,5 +148,9 @@ function GitAuthorName()
 endfunction
 
 "airline
-"let g:Powerline_symbols = "fancy"
-"let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = "fancy"
+let g:airline_powerline_fonts = 1
+
+if executable('ag')
+  let g:ackprg = 'ag'
+endif
