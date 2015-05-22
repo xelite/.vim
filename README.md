@@ -19,6 +19,7 @@ F10        toggle nu
 ^p         ctrlp
 ^n         nerdtree
 \scl       SQLUCreateColumnList
+:Tableize  generete table
 ```
 
 #### visual mode
@@ -37,6 +38,7 @@ gc         comment selected text
 * https://github.com/tpope/vim-commentary
 * https://github.com/tpope/vim-fugitive
 * https://github.com/vim-scripts/SQLUtilities
+* https://github.com:dhruvasagar/vim-table-mode.git
 
 ### SKINS
 
