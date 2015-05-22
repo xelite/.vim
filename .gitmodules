@@ -28,3 +28,6 @@
 [submodule "bundle/YouCompleteMe"]
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/table-mode"]
+	path = bundle/table-mode
+	url = git@github.com:dhruvasagar/vim-table-mode.git
