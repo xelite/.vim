@@ -17,6 +17,7 @@ set softtabstop=4
 set autoindent
 set smartindent
 set expandtab
+set mouse=c
 filetype plugin indent on
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
