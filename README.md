@@ -5,6 +5,8 @@ git clone https://github.com:xelite/.vim.git ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 cd ~/.vim
 git submodule update --init
+
+# also install https://github.com/powerline/fonts
 ```
 
 ### CHEETSHEET
