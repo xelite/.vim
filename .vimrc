@@ -1,11 +1,20 @@
 command W w !sudo tee % >/dev/null
 set nu
 syntax enable
-set background=dark
-colorscheme Tomorrow-Night-Eighties
+set background=light
+"colorscheme Tomorrow-Night-Eighties
 "colorscheme molokai
-let g:molokai_original = 1
+"let g:molokai_original = 1
 let g:rehash256 = 1
+colorscheme pencil
+
+if !has("gui_running")
+    set t_Co=256
+endif
+
+let g:airline_theme = 'pencil'
+let g:pencil_higher_contrast_ui = 1
+
 map <F5> :setlocal spell! spelllang=pl<CR>
 set hlsearch
 set incsearch
