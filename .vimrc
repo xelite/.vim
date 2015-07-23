@@ -150,3 +150,21 @@ endfunction
 "airline
 let g:Powerline_symbols = "fancy"
 let g:airline_powerline_fonts = 1
+
+"irule
+so $HOME/.vim/irule/pyfunc.vim
+let $irulsyn='~/.vim/syntax/irul.vim' "Syntax file for *.irul files.
+let g:irul_location='~/.vim/irule/irul_dict' "Location of the syntax dict.
+au BufRead,BufNewFile *.irul set filetype=irul "If you name a file *.irul, set ftype.
+au! Syntax irul source $irulsyn
+
+" Custom commands as shortcuts
+com -nargs=? Sav call PubRule(<f-args>)
+com Ls  call GetRules()
+com Get call OpenRule()
+com -nargs=* Connect call Connect(<f-args>)
+com New call NewRule()
+com -nargs=? Apply call ApplyRule(<f-args>)
+com -nargs=* Delete call DeleteRule(<f-args>)
+com -nargs=1 Partition call Partition (<f-args>)
+
