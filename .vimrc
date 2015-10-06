@@ -109,8 +109,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 "syntastic
-let g:syntastic_error_symbol = "✗"
-let g:syntastic_warning_symbol = "⚠"
+"let g:syntastic_error_symbol = "✗"
+"let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_enable_highlighting = 0
 let g:syntastic_auto_jump = 3
 let g:syntastic_always_populate_loc_list = 1
