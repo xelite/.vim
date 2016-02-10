@@ -1,0 +1,7 @@
+.git
+bundle/YouCompleteMe
+bundle/syntastic
+bundle/syntastic-extras
+bundle/vim-airline
+
+
