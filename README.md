@@ -1,10 +1,12 @@
 ### INSTALL
 ```bash
 mv ~/.vim ~/.vim-old
-git clone https://github.com:xelite/.vim.git ~/.vim
+git clone https://github.com/xelite/.vim.git ~/.vim
 ln -s ~/.vim/.vimrc ~/.vimrc
 cd ~/.vim
-git submodule update --init
+git submodule update --init --recursive
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
 
 # also install https://github.com/powerline/fonts
 ```
@@ -41,6 +43,7 @@ gc         comment selected text
 * https://github.com/tpope/vim-fugitive
 * https://github.com/vim-scripts/SQLUtilities
 * https://github.com:dhruvasagar/vim-table-mode.git
+* https://github.com/Valloric/YouCompleteMe
 
 ### SKINS
 
